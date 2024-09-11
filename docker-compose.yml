@@ -1,0 +1,27 @@
+services:
+   db:
+     image: mysql:8.4
+     container_name: navi_db
+     volumes:
+       - navi_data:/var/lib/mysql
+       - ./database:/root/database
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+   web:
+     depends_on:
+       - db
+     container_name: navi_web
+     build:
+       context: build_docker
+       dockerfile: Dockerfile-web
+     volumes:
+       - ./maquette:/var/www/html
+     ports:
+       - "8020:80"       
+     restart: always
+
+volumes:
+  navi_data:
+    
