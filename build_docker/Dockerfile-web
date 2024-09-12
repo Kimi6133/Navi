@@ -3,6 +3,12 @@ FROM php:8.3-apache
 RUN apt-get update && \
     docker-php-ext-install mysqli pdo pdo_mysql
 
+COPY apache_conf_available/*.conf /etc/apache2/conf-available/
+RUN a2enconf servername
+
+COPY apache_sites_available/site-navi.conf /etc/apache2/sites-available/
+RUN a2ensite site-navi.conf
+
 # Use the default development configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
-COPY php-file_upload.ini $PHP_INI_DIR/conf.d/
+COPY php_conf/php-file_upload.ini $PHP_INI_DIR/conf.d/
