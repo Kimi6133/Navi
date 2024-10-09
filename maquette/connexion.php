@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+<?php
+
+$data = [
+    "title" => "Header"
+];
+
+/// Vue 
+ob_start();
+?>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Connexion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+
+<?php
+include("template/header.html");
+?>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    
   <div class="container col-lg-6 offset-lg-5">
     <div class="col-9">
       <div class="card" style="width: 18rem;">
           <div class="card-body ">
             <h5 class="card-title">Connexion</h5>
-            <form action="dashboard.html" method="POST">
+            <form action="dashboard.php" method="POST">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -34,8 +42,16 @@
       </div>
     </div>    
   </div>
-    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+  <?php
+
+include("template/footer.html");
+?>
+
 </body>
+</html>
+
+<?php
+ob_end_flush();
+
+// Retour programme principal
