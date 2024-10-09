@@ -36,7 +36,7 @@ include("template/header.html");
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <a href="mdp_oublie.html" class="card-link d-block">Mot de passe oublié ? </a>
+            <a href="mdp_oublie.php" class="card-link d-block">Mot de passe oublié ? </a>
             <a href="inscription.php" class="card-link d-block">Se créer un compte</a>
           </div>
       </div>
