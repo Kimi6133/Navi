@@ -1,7 +1,7 @@
 <?php
 
 $data = [
-    "title" => "Header"
+    "title" => "Connexion"
 ];
 
 /// Vue 
@@ -37,7 +37,7 @@ include("template/header.html");
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <a href="mdp_oublie.html" class="card-link d-block">Mot de passe oublié ? </a>
-            <a href="inscription.html" class="card-link d-block">Se créer un compte</a>
+            <a href="inscription.php" class="card-link d-block">Se créer un compte</a>
           </div>
       </div>
     </div>    
