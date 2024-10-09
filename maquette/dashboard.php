@@ -1,7 +1,7 @@
 <?php
 
 $data = [
-    "title" => "Header"
+    "title" => "Tableau de bord"
 ];
 
 /// Vue 
