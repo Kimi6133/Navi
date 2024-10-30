@@ -26,8 +26,6 @@ include("template/navbar.html");
 include("template/footer.html");
 ?>
 
-</body>
-</html>
 
 <?php
 ob_end_flush();
