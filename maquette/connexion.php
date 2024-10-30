@@ -10,7 +10,6 @@ ob_start();
 include("template/header.html");
 ?>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
-    
   <div class="container col-lg-6 offset-lg-5">
     <div class="col-9">
       <div class="card" style="width: 18rem;">
@@ -39,7 +38,8 @@ include("template/header.html");
     </div>    
   </div>
 
-  <?php
+  
+<?php
 
 include("template/footer.html");
 

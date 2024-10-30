@@ -41,5 +41,4 @@ include("template/header.html");
     </div>
 <?php
 include("template/footer.html");
-?>
 
