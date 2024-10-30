@@ -7,7 +7,7 @@ services:
        - ./database:/root/database
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MYSQL_ROOT_PASSWORD: root_pwd
 
    web:
      depends_on:
