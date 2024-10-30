@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="dashboard.php">Navi</a>
@@ -20,11 +19,39 @@
                     <a class="nav-link text-white" href="#">? </a>
                 </li>
             </ul>
-            <div class="d-flex">
-                <a href="index.php" class="btn btn-danger me-2"> 
-                  <svg class="bi" width="32" height="32"><use xlink:href="assets/images/icons.svg#power"/></svg>
-                </a>
+            <div class="d-flex align-items-center">
+                <img src="assets/images/user.png" alt="User" class="user-icon" onclick="toggleUserInfo()">
             </div>
         </div>
     </div>
-  </nav>
+</nav>
+
+<!-- Section informations utilisateur -->
+<div id="user-info" class="user-info">
+    <div class="d-flex align-items-center">
+        <h4>Information utilisateur</h3>
+        <img src="assets/images/user.png" alt="User" class="user-icon">
+    </div>
+    <p>Nom : nom </p>
+    <p>Prénom : prénom </p>
+    <p>Email : email@gmail.com</p>
+    <p>Classe : BTS SIO SLAM</p>
+    <a href="gestion_profil.php" class="btn btn-success me-2 mb-1"> Changer MDP</a>
+    <a href="index.php" class="btn btn-danger me-2"> Se déconnecter</a>
+</div>
+
+<script>
+    function toggleUserInfo() {
+        const userInfo = document.getElementById("user-info");
+        userInfo.style.display = userInfo.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        const userInfo = document.getElementById("user-info");
+        const userIcon = document.querySelector(".user-icon");
+
+        if (!userInfo.contains(event.target) && event.target !== userIcon) {
+            userInfo.style.display = "none";
+        }
+    });
+</script>
