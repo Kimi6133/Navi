@@ -12,5 +12,6 @@
 - installer git dans les VM
 - creation des containers
 - tester la maquette et la finaliser
-- regler les droits d'acces des fichiers dans apache 
+- regler les droits d'acces des fichiers dans apache
+- éviter la répétition des ouverture/fermeture des balise PHP
 

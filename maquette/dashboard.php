@@ -6,16 +6,8 @@ $data = [
 
 /// Vue 
 ob_start();
-?>
 
-<!doctype html>
-<html lang="fr">
-
-<?php
 include("template/header.html");
-?>
-<body>
-<?php
 include("template/navbar.html");
 
 ?>
@@ -24,12 +16,5 @@ include("template/navbar.html");
 <?php
 
 include("template/footer.html");
-?>
 
-</body>
-</html>
-
-<?php
 ob_end_flush();
-
-// Retour programme principal

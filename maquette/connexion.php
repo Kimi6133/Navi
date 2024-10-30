@@ -6,11 +6,7 @@ $data = [
 
 /// Vue 
 ob_start();
-?>
-<!doctype html>
-<html lang="fr">
 
-<?php
 include("template/header.html");
 ?>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
@@ -46,12 +42,7 @@ include("template/header.html");
   <?php
 
 include("template/footer.html");
-?>
 
-</body>
-</html>
-
-<?php
 ob_end_flush();
 
 // Retour programme principal

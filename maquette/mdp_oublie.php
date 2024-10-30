@@ -6,12 +6,7 @@ $data = [
 
 ///Vue
 ob_start();
-?>
 
-<!doctype html>
-<html lang="fr">
-  
-<?php
 include("template/header.html");
 ?>
     <div class="d-flex justify-content-center align-items-center vh-100">
@@ -47,6 +42,4 @@ include("template/header.html");
 <?php
 include("template/footer.html");
 ?>
-  
-  </body>
-</html>
+

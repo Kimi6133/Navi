@@ -6,11 +6,7 @@ $data = [
 
 /// Vue 
 ob_start();
-?>
-<!doctype html>
-<html lang="fr">
 
-<?php
 include("template/header.html");
 ?>
 <style>
@@ -75,15 +71,10 @@ include("template/header.html");
     </form>
 </div>
 
-  <?php
+<?php
 
 include("template/footer.html");
-?>
 
-</body>
-</html>
-
-<?php
 ob_end_flush();
 
 // Retour programme principal
