@@ -9,7 +9,7 @@ ob_start();
 
 include("template/header.html");
 ?>
-<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+<div class="d-flex justify-content-center align-items-center vh-100">
   <div class="form">
     <div class="d-flex justify-content-center align-items-center mb-4">
       <img src="assets/images/favicon.ico" style="height:40px; width: 40px; margin-right: 10px;" class="card-img-top" alt="Logo Navi">  
