@@ -34,3 +34,13 @@
     height: auto;
     width: 250px;
 }
+
+input[type=file]::file-selector-button {
+    margin-right: 8px;
+    border: none;
+    background: #084cdf;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+  }
