@@ -12,7 +12,6 @@ include("template/navbar.html");
 
 ?>
   <!-- Contenu Principal ( garder seulement la navbar ) -->
-
 <?php
 
 include("template/footer.html");
