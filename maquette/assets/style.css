@@ -39,4 +39,14 @@ body {
     background: radial-gradient(circle, #87CEEB, #B0E0E6);
     background-size: cover;
     background-position: center;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 8px;
+    border: none;
+    background: #084cdf;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
   }
