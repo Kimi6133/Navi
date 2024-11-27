@@ -4,8 +4,9 @@ USE navi;
 
 CREATE USER IF NOT EXISTS 'navi'@'localhost' IDENTIFIED BY 'nimda';
 GRANT ALL PRIVILEGES ON navi.* TO 'navi'@'localhost';
+CREATE USER IF NOT EXISTS 'navi'@'%' IDENTIFIED BY 'nimda';
+GRANT ALL PRIVILEGES ON navi.* TO 'navi'@'%';
 FLUSH PRIVILEGES;
-
 CREATE TABLE classe(
    id_classe INT,
    nom VARCHAR(50) NOT NULL,
@@ -28,6 +29,8 @@ CREATE TABLE document(
    id_document INT,
    nom VARCHAR(50) NOT NULL,
    lien VARCHAR(50),
+   num_fichier INT,
+   nom_original_fichier VARCHAR(50),
    PRIMARY KEY(id_document)
 );
 
@@ -84,4 +87,12 @@ CREATE TABLE devoir_critere(
    PRIMARY KEY(id_devoir, id_critere),
    FOREIGN KEY(id_devoir) REFERENCES devoir(id_devoir),
    FOREIGN KEY(id_critere) REFERENCES critere_notation(id_critere)
+);
+
+CREATE TABLE critere_eval(
+   id_critere INT,
+   id_eval INT,
+   PRIMARY KEY(id_critere, id_eval),
+   FOREIGN KEY(id_critere) REFERENCES critere_notation(id_critere),
+   FOREIGN KEY(id_eval) REFERENCES evaluation(id_eval)
 );
