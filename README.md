@@ -1,10 +1,7 @@
 # Navi
 
 ## Todo
-- créer les vues (documents, devoirs...)
-- terminer la maquette (écrans internes: groupes, devoirs, acceptation profils...)
-- Harmoniser les différents écrans existants (couleurs, centrage, tailles)
-- Améliorer le code pour générer les vues
+- Voir issues GitHub / fabrice1618
 - Tester les écrans générés (pagespeed, accessibilité...)
 
 ## Done
@@ -16,4 +13,6 @@
 - regler les droits d'acces des fichiers dans apache
 - séparer dashboard (juste un hello word dedans) et header(bandeau navbar)
 - éviter la répétition des ouverture/fermeture des balise PHP
-
+- créer les vues (documents, devoirs...)
+- Harmoniser les différents écrans existants (couleurs, centrage, tailles)
+- Améliorer le code pour générer les vues

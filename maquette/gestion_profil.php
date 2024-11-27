@@ -19,7 +19,7 @@ include("template/navbar.html");
   <div class="row">
       <!-- Colonne de gauche pour afficher les informations -->
       <div class="col-md-4">
-          <div class="card">
+          <div class="card bg-light rounded-4">
               <div class="card-body text-center">
                   <!-- Image de profil -->
                   <img src="assets/images/user.png" alt="Photo de profil" class="img-fluid rounded-circle mb-3" width="150">
@@ -32,7 +32,7 @@ include("template/navbar.html");
 
       <!-- Colonne de droite pour éditer les informations -->
       <div class="col-md-8">
-          <div class="card">
+          <div class="card bg-light rounded-4">
               <div class="card-body">
                   <form>
                       <!-- Nom -->
