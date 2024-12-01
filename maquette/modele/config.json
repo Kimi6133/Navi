@@ -1,0 +1,8 @@
+{
+    "driver": "mysql",
+    "host": "db",
+    "dbname": "navi",
+    "charset": "utf8",
+    "username": "navi",
+    "password": "nimda"
+}
