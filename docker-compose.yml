@@ -1,26 +1,58 @@
 services:
-   db:
-     image: mysql:8.4
-     container_name: navi_db
-     volumes:
-       - navi_data:/var/lib/mysql
-       - ./database:/root/database
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: root_pwd
+  db:
+    image: mysql:8.4
+    container_name: navi_db
+    volumes:
+      - navi_data:/var/lib/mysql
+      - ./database:/root/database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pwd
 
-   web:
-     depends_on:
-       - db
-     container_name: navi_web
-     build:
-       context: build_docker
-       dockerfile: Dockerfile-web
-     volumes:
-       - ./maquette:/var/www/html
-     ports:
-       - "8020:80"       
-     restart: always
+  maquette:
+    container_name: navi_maquette
+    build:
+      context: build_docker
+      dockerfile: Dockerfile-web
+    volumes:
+      - ./maquette:/var/www/html
+    ports:
+      - "8020:80"       
+    deploy:
+      restart_policy:
+        condition: none
+
+  web:
+    depends_on:
+      - db
+    container_name: navi_web
+    build:
+      context: build_docker
+      dockerfile: Dockerfile-web
+    volumes:
+      - ./public:/var/www/html
+      - ./src:/var/www/html/src
+      - ./config:/var/www/html/config
+    ports:
+      - "8021:80"       
+    deploy:
+      restart_policy:
+        condition: none
+
+  cli:
+    depends_on:
+      - db
+    container_name: navi_cli
+    build:
+      context: build_docker
+      dockerfile: Dockerfile-cli
+    volumes:
+      - ./script:/script
+      - ./src:/script/src
+      - ./config:/script/config
+    deploy:
+      restart_policy:
+        condition: none
 
 volumes:
   navi_data:
