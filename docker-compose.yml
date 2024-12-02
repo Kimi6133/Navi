@@ -32,7 +32,7 @@ services:
     volumes:
       - ./public:/var/www/html
       - ./src:/var/www/html/src
-      - ./config:/var/www/html/config
+      - ./build_docker/app_config:/var/www/html/app_config
     ports:
       - "8021:80"       
     deploy:
@@ -49,7 +49,7 @@ services:
     volumes:
       - ./script:/script
       - ./src:/script/src
-      - ./config:/script/config
+      - ./build_docker/app_config:/script/app_config
     deploy:
       restart_policy:
         condition: none
