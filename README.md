@@ -16,3 +16,13 @@
 - créer les vues (documents, devoirs...)
 - Harmoniser les différents écrans existants (couleurs, centrage, tailles)
 - Améliorer le code pour générer les vues
+
+## Démarrage des containers
+
+Démarrage / arrêt d'un service
+
+```bash
+docker compose up -d web
+docker ps
+docker compose stop web
+```
