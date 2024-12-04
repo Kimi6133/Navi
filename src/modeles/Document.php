@@ -1,8 +1,7 @@
 <?php
 
-class Document {
-    private static $instance = null;
-
+class Document 
+{
     // Attributs de la classe Document (adaptés au diagramme)
     private $id_document;
     private $nom;
@@ -11,20 +10,13 @@ class Document {
     private $nom_original_fichier;
 
     // Constructeur privé pour empêcher l'instanciation directe
-    private function __construct($id = null, $nom = '', $lien = '', $num = 0, $nomOriginal = '') {
+    public function __construct($id = null, $nom = '', $lien = '', $num = 0, $nomOriginal = '') 
+    {
         $this->id_document = $id;
         $this->nom = $nom;
         $this->lien = $lien;
         $this->num_fichier = $num;
         $this->nom_original_fichier = $nomOriginal;
-    }
-
-    // Méthode pour obtenir l'instance unique
-    public static function getInstance() {
-        if (self::$instance === null) {
-            self::$instance = new self();
-        }
-        return self::$instance;
     }
 
     // Méthodes de gestion des documents

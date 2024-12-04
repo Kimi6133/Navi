@@ -17,7 +17,7 @@ services:
     volumes:
       - ./maquette:/var/www/html
     ports:
-      - "8020:80"       
+      - "8022:80"       
     deploy:
       restart_policy:
         condition: none
